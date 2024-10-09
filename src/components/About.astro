@@ -1,0 +1,106 @@
+<section id="about">
+    <div class="section-header">
+        <h1>About Me.</h1>
+        <div class="line"></div>
+    </div>
+    <p class="text-muted">
+        I am a Software Engineer, specializing in the design, development, and
+        deployment of high-performance scalable applications. I have expertise
+        in Python, Rust, Django, FastAPI, React, and DevOps practices coupled
+        with deeper experience in the integration of cloud and design for
+        scalable architectures. I am excited about delivering a tailored
+        solution that satisfies business needs without any reduction in
+        efficiency and performance.
+    </p>
+    <div class="grid-container">
+        <div class="section">
+            <h3 class="text-muted">Name</h3>
+            <b>Chandrabhan Maurya</b>
+        </div>
+        <div class="section">
+            <h3 class="text-muted">Nationality</h3>
+            <p>Indian</p>
+        </div>
+        <div class="section">
+            <h3 class="text-muted">Phone</h3>
+            <p>(+91) 9473833100</p>
+        </div>
+        <div class="section">
+            <h3 class="text-muted">Email</h3>
+            <p><a href="mailto:chandrabhan.maurya@proton.me">chandrabhan.maurya@proton.me</a></p>
+        </div>
+        <div class="section">
+            <h3 class="text-muted">Experience</h3>
+            <p>{new Date().getFullYear()-2020}+ years</p>
+        </div>
+        <div class="section">
+            <h3 class="text-muted">Freelance</h3>
+            <p>Available</p>
+        </div>
+        <!-- <div class="section">
+            <h3 class="text-muted">Skype</h3>
+            <p>hello.proton</p>
+        </div> -->
+        <div class="section">
+            <h3 class="text-muted">Language</h3>
+            <p>English</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .info-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .info-section {
+        background-color: #1f2937; /* Slightly lighter background for contrast */
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .info-section:hover {
+        transform: translateY(-10px); /* Hover effect to lift the section */
+    }
+
+    .info-section h2 {
+        font-size: 20px;
+        color: #f9a826; /* Accent color for headings */
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    .info-section p {
+        font-size: 18px;
+        color: #d1d5db;
+    }
+
+    .info-section a {
+        color: #3b82f6; /* Light blue for email */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .info-section a:hover {
+        text-decoration: underline;
+    }
+
+    .icon {
+        font-size: 24px;
+        color: #f9a826;
+        margin-bottom: 12px;
+    }
+
+    .info-section p:first-child {
+        margin-top: 10px;
+    }
+</style>

@@ -10,41 +10,192 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta
+			name="description"
+			content="I am a Software Engineer with expertise in building scalable, high-performance applications. My skills span across Python, Rust, Django, FastAPI, React, and DevOps practices, "
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="">
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--primary: #0f141c;
+		--secondary: #171b22;
+		--accent: #6c349b;
+		--accent-dark: #2c3a4d;
+		--light: #faf6f7;
+		--dark: #000000c0;
+		--text: var(--light);
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+	* {
+		box-sizing: border-box;
+		color: var(--text);
+		scroll-behavior: smooth;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	html,
+	body {
+		width: 100vw;
+		overflow: hidden;
+		height: 100vh;
+		margin: 0;
+		font-family: Arial, sans-serif;
+
+		background-color: var(--dark);
+	}
+
+	.text-accent {
+		color: var(--accent);
+	}
+	.text-muted {
+		color: rgba(201, 201, 201, 0.699);
+	}
+	.ps {
+		padding-left: 5px;
+	}
+	.pe {
+		padding-right: 5px;
+	}
+
+	.icon-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		color: unset;
+		border-radius: 50%;
+		background-color: var(--accent-dark);
+		min-width: 50px;
+		min-height: 50px;
+	}
+	.icon-wrapper svg {
+		padding: 2px;
+	}
+	.bg-accent {
+		background-color: var(--accent);
+	}
+
+	.bg-accent-dark {
+		background-color: var(--accent-dark);
+	}
+	.nav-link {
+		text-decoration: none;
+		color: unset;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+	}
+
+	.grid-container {
+		display: grid;
+		position: relative;
+		z-index: 0;
+		grid-template-columns: 1fr; /* One column by default */
+		gap: 20px; /* Space between grid items */
+		padding: 20px;
+		margin-top: 20px;
+	}
+
+	/* .grid-item {
+		background-color: #f4f4f4;
+		padding: 20px;
+		border: 1px solid #ddd;
+		text-align: center;
+	} */
+
+	/* Media query for laptop screens and larger (>= 1024px) */
+	@media (min-width: 1024px) {
+		.grid-container {
+			grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+		}
+	}
+
+	/* Base styles for header */
+	.header-text {
+		color: #fff; /* White text */
+		font-weight: 700; /* Bold */
+		text-align: start; /* Center the text */
+		margin: 20px 0;
+	}
+
+	h3 span,
+	h1 span,
+	.header-text span {
+		font-weight: 400; /* Bold */
+	}
+	/* Default for larger screens (desktops) */
+	.header-text {
+		font-size: 48px;
+		line-height: 1.2;
+	}
+
+	/* For screens 1200px and below (large desktops, laptops) */
+	@media (max-width: 1200px) {
+		.header-text {
+			font-size: 40px;
+		}
+		.header-scaled-out {
+			font-size: 40px;
+		}
+	}
+
+	/* For screens 992px and below (tablets) */
+	@media (max-width: 992px) {
+		.header-text {
+			font-size: 36px;
+		}
+		.header-scaled-out {
+			font-size: 18px;
+		}
+	}
+
+	/* For screens 768px and below (small tablets, large phones) */
+	@media (max-width: 768px) {
+		.header-text {
+			font-size: 32px;
+		}
+		.header-scaled-out {
+			font-size: 16px;
+		}
+	}
+
+	/* For screens 576px and below (phones) */
+	@media (max-width: 576px) {
+		.header-text {
+			font-size: 28px;
+		}
+		.header-scaled-out {
+			font-size: 14px;
+		}
+	}
+
+	/* For very small screens (extra small phones) */
+	@media (max-width: 375px) {
+		.header-text {
+			font-size: 24px;
+		}
+		.header-scaled-out {
+			font-size: 12px;
+		}
+	}
+
+	.section-header {
+		display: flex;
+		align-items: baseline;
+		gap: 15px;
+	}
+	.section-header h1 {
+		font-size: 55px;
+	}
+	.section-header .line {
+		height: 2px;
+		background-color: #ffffff33;
+		flex-grow: 1;
+		mix-blend-mode: hard-light;
 	}
 </style>

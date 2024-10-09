@@ -1,0 +1,353 @@
+---
+import IconPy from "./icons/IconPy.astro";
+import IconRS from "./icons/IconRS.astro";
+import IconJS from "./icons/IconJS.astro";
+import IconDJ from "./icons/IconDJ.astro";
+import IconRE from "./icons/IconRE.astro";
+import IconDK from "./icons/IconDK.astro";
+import IconNX from "./icons/IconNX.astro";
+import IconAS from "./icons/IconAS.astro";
+import IconMSQL from "./icons/IconMSQL.astro";
+import IconMONGO from "./icons/IconMONGO.astro";
+import ProfileImage from "./ProfileImage.astro";
+---
+
+<section id="home" class="grid-container">
+    <div class="grid-item">
+        <h2 class="header-text">Chandrabhan <span>Maurya</span></h2>
+        <h4 class="text-accent">Software engineer</h4>
+        <p class="text-muted">
+            Dedicated to creating scalable applications. I specialize in Python,
+            Rust, Django, React, and cloud technologies to enhance user
+            experiences.
+        </p>
+        <div class="btn-group">
+            <button class="bg-accent">View Work</button><button
+                class="bg-accent-dark">Let's Connect</button
+            >
+        </div>
+    </div>
+    <div class="grid-item poster-main">
+        <div class="floating-circle-container">
+            <div class="floating-circle py">
+                <p>
+                   <IconPy/>
+                </p>
+            </div>
+            <div class="floating-circle rs">
+                <p>
+                   <IconRS/>
+                </p>
+            </div>
+            <div class="floating-circle js">
+                <p>
+                   <IconJS/>
+                </p>
+            </div>
+            <div class="floating-circle dj">
+                <p>
+                    <IconDJ/>
+                </p>
+            </div>
+            <div class="floating-circle re">
+                <p>
+                    <IconRE/>
+                </p>
+            </div>
+            <div class="floating-circle dk">
+                <p>
+                   <IconDK/>
+                </p>
+            </div>
+            <div class="floating-circle nx">
+                <p>
+                   <IconNX/> 
+                </p>
+            </div>
+            <div class="floating-circle as">
+                <p>
+                   <IconAS>
+                </p>
+            </div>
+            <div class="floating-circle msql">
+                <p>
+                    <IconMSQL/>
+                </p>
+            </div>
+            <div class="floating-circle mongo">
+                <p>
+                   <IconMONGO/>
+                </p>
+            </div>
+        </div>
+        <div class="poster-wrapper">
+            <div class="ring ring1"></div>
+            <ProfileImage />
+        </div>
+    </div>
+</section>
+
+<style>
+    #home {
+        height: max-content;
+        overflow: hidden;
+    }
+    #home .poster-main {
+        position: relative;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -70%);
+        left: 50%;
+        top: 50%;
+        margin-top: 70px;
+    }
+    #home .btn-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    #home .btn-group button {
+        border-radius: 50px;
+        padding: 15px;
+        border: 0;
+        font-size: large;
+    }
+    #home .btn-group button:hover {
+        filter: contrast(1.25) brightness(1.25) saturate(1.9);
+        transition: all 1s ease;
+    }
+    #home .ring {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* background-color: blueviolet; */
+        background-color: #42176938;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow:
+            0 0 5px #4c068dd2,
+            0 0 10px #4c068dd2,
+            0 0 15px #4c068dd2,
+            0 0 30px #4c068dd2,
+            0 0 70px #4c068dd2;
+    }
+    #home .floating-circle-container {
+        position: absolute; /* Container for positioning */
+        width: 100%; /* Adjust width as needed */
+        height: 400px; /* Adjust height as needed */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    #home .floating-circle {
+        display: flex;
+        position: absolute; /* Positioning for floating effect */
+        transform: translateX(-50%); /* Adjust for centering */
+        justify-content: center;
+        align-items: center;
+        width: 50px; /* Width of the circle */
+        height: 50px; /* Height of the circle */
+        border-radius: 50%; /* Makes the div circular */
+        /* animation: float 5s ease-in-out infinite; Animation properties */
+    }
+
+    #home .floating-circle.py {
+        top: 60px; /* Start from the bottom */
+        left: 50px; /* Start from the bottom */
+        animation: floatPY 6s ease-in-out infinite;
+    }
+    #home .floating-circle.dj {
+        top: 70px; /* Start from the bottom */
+        left: 150px; /* Start from the bottom */
+        animation: floatDJ 6s ease-in-out infinite;
+    }
+    #home .floating-circle.rs {
+        bottom: 60px; /* Start from the bottom */
+        right: 50px; /* Start from the bottom */
+        animation: floatRS 6s ease-in-out infinite;
+    }
+    #home .floating-circle.re {
+        bottom: 130px; /* Start from the bottom */
+        left: 10px; /* Start from the bottom */
+        animation: floatRE 6s ease-in-out infinite;
+    }
+    #home .floating-circle.js {
+        top: 150px; /* Start from the bottom */
+        left: 40px; /* Start from the bottom */
+        animation: floatJS 6s ease-in-out infinite;
+    }
+    #home .floating-circle.mongo {
+        top: 160px; /* Start from the bottom */
+        right: 30px; /* Start from the bottom */
+        animation: floatRE 6s ease-in-out infinite;
+    }
+    #home .floating-circle.msql {
+        top: 60px; /* Start from the bottom */
+        right: 60px; /* Start from the bottom */
+        animation: floatRS 6s ease-in-out infinite;
+    }
+    #home .floating-circle.as {
+        bottom: 60px; /* Start from the bottom */
+        left: 70px; /* Start from the bottom */
+        animation: floatDJ 6s ease-in-out infinite;
+    }
+    #home .floating-circle.nx {
+        bottom: 40px; /* Start from the bottom */
+        left: 170px; /* Start from the bottom */
+        animation: floatDJ 6s ease-in-out infinite;
+    }
+    #home .floating-circle.dk {
+        top: 20px; /* Start from the bottom */
+        left: 170px; /* Start from the bottom */
+        animation: floatPY 6s ease-in-out infinite;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 1024px) {
+        #home .floating-circle {
+            width: 40px;
+            height: 40px;
+        }
+        #home .floating-circle.py {
+            top: 50px;
+            left: 40px;
+        }
+        #home .floating-circle.dj {
+            top: 60px;
+            left: 120px;
+        }
+        #home .floating-circle.rs {
+            bottom: 50px;
+            right: 40px;
+        }
+        #home .floating-circle.re {
+            bottom: 110px;
+            left: 10px;
+        }
+        #home .floating-circle.js {
+            top: 130px;
+            left: 30px;
+        }
+        #home .floating-circle.mongo {
+            top: 140px;
+            right: 20px;
+        }
+        #home .floating-circle.msql {
+            top: 50px;
+            right: 50px;
+        }
+        #home .floating-circle.as {
+            bottom: 50px;
+            left: 60px;
+        }
+        #home .floating-circle.nx {
+            bottom: 30px;
+            left: 150px;
+        }
+        #home .floating-circle.dk {
+            top: 10px;
+            left: 160px;
+        }
+    }
+
+    /* Media query for mobile screens */
+    @media (max-width: 768px) {
+        #home .floating-circle {
+            width: 30px;
+            height: 30px;
+        }
+        #home .floating-circle.py {
+            top: 40px;
+            left: 30px;
+        }
+        #home .floating-circle.dj {
+            top: 50px;
+            left: 100px;
+        }
+        #home .floating-circle.rs {
+            bottom: 40px;
+            right: 30px;
+        }
+        #home .floating-circle.re {
+            bottom: 90px;
+            left: 5px;
+        }
+        #home .floating-circle.js {
+            top: 110px;
+            left: 20px;
+        }
+        #home .floating-circle.mongo {
+            top: 120px;
+            right: 10px;
+        }
+        #home .floating-circle.msql {
+            top: 40px;
+            right: 40px;
+        }
+        #home .floating-circle.as {
+            bottom: 40px;
+            left: 50px;
+        }
+        #home .floating-circle.nx {
+            bottom: 20px;
+            left: 130px;
+        }
+        #home .floating-circle.dk {
+            top: 10px;
+            left: 140px;
+        }
+    }
+    @keyframes floatPY {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes floatDJ {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    @keyframes floatRS {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes floatRE {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-12px);
+        }
+    }
+
+    @keyframes floatJS {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-18px);
+        }
+    }
+</style>
